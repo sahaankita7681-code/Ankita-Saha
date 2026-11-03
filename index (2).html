@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ankita Saha | Forensic Science Undergraduate</title>
+<meta name="description" content="Digital portfolio of Ankita Saha, B.Sc. Forensic Science (Hons. with Research) student at Lovely Professional University.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#eef1f2; --card:#f8fafb; --ink:#14232b; --muted:#4d5f68; --line:#c9d3d8;
+  --tag:#f2c230; --tag-ink:#3a2c00; --glow:#2f6bff; --night:#0d1b2a; --night-text:#dbe7f3;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0f1a22; --card:#15232d; --ink:#e8eef2; --muted:#9db0bb; --line:#27394538; --line:#2a3b46; --glow:#7ea6ff}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.08rem;line-height:1.65}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--glow);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;align-items:center;justify-content:space-between;height:56px;overflow-x:auto;white-space:nowrap}
+nav b{font-family:var(--display);font-weight:800}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-family:var(--display);font-weight:500;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding:64px 0 72px;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,8vw,5.6rem);font-weight:800;letter-spacing:-.03em}
+.hero .role{font-family:var(--display);font-weight:500;font-size:1.2rem;color:var(--muted);margin:18px 0 22px}
+.hero p{max-width:34em;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:var(--display);font-weight:700;text-decoration:none;padding:12px 20px;border:2px solid var(--ink);border-radius:999px;font-size:.98rem}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn:hover{background:var(--tag);color:var(--tag-ink);border-color:var(--tag)}
+.print{width:100%;max-width:420px;justify-self:center;color:var(--ink)}
+.print path{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;opacity:.85}
+.print .draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:trace 2.4s ease-out forwards}
+@keyframes trace{to{stroke-dashoffset:0}}
+.scale{display:flex;justify-content:space-between;font-family:var(--display);font-size:.8rem;color:var(--muted);border-top:2px solid var(--ink);margin-top:10px;padding-top:4px}
+
+/* sections */
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;letter-spacing:-.02em;margin-bottom:32px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px 48px}
+.cols p{margin:0 0 1em}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px 24px}
+.fact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px}
+.fact dt{font-family:var(--display);font-weight:700;font-size:.95rem}
+.fact dd{margin:0;color:var(--muted)}
+
+/* education timeline */
+.edu{list-style:none;margin:0;padding:0 0 0 22px;border-left:3px solid var(--ink)}
+.edu li{position:relative;padding:0 0 30px 18px}
+.edu li::before{content:"";position:absolute;left:-30px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--tag);border:3px solid var(--ink)}
+.edu h3{font-size:1.25rem}
+.edu .where{color:var(--muted);margin:2px 0 8px}
+.edu ul{margin:0;padding-left:1.1em}
+
+/* exhibits */
+.exhibits{display:grid;gap:20px}
+.exhibit{display:grid;grid-template-columns:64px 1fr;gap:22px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:26px}
+.marker{width:56px;height:64px;background:var(--tag);color:var(--tag-ink);font-family:var(--display);font-weight:800;font-size:1.9rem;display:grid;place-items:center;clip-path:polygon(0 0,100% 0,100% 82%,50% 100%,0 82%);padding-bottom:8px}
+.exhibit h3{font-size:1.4rem}
+.exhibit .type{color:var(--muted);font-style:italic;margin:2px 0 10px}
+.exhibit ul{margin:12px 0;padding-left:1.1em}
+.exhibit li{margin-bottom:3px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-family:var(--display);font-size:.85rem;font-weight:500;border:1px solid var(--ink);border-radius:999px;padding:3px 12px}
+
+/* achievements, dark */
+.night{background:var(--night);color:var(--night-text);border-bottom:0}
+.night h2{color:#fff}
+.night .glow{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.night .win{border-top:2px solid #3d7bff;padding-top:16px}
+.night h3{font-size:1.2rem;color:#fff;margin-bottom:8px}
+.night p{margin:0;color:#b4c4d4}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.skills h3{font-size:1.1rem;margin-bottom:10px}
+.skills ul{margin:0;padding-left:1.1em}
+.note{margin-top:26px;font-style:italic;color:var(--muted);max-width:44em}
+
+/* contact */
+.contact a.big{display:block;font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,4vw,2.4rem);letter-spacing:-.02em;word-break:break-all;margin-bottom:22px}
+.contact ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:12px 28px;font-family:var(--display);font-weight:500}
+footer{padding:28px 0;color:var(--muted);font-size:.92rem}
+
+@media (max-width:760px){
+  .hero .wrap,.cols,.night .glow,.skills{grid-template-columns:1fr}
+  .exhibit{grid-template-columns:1fr}
+  .print{max-width:260px}
+  section{padding:52px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  .print .draw{animation:none;stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <b>Ankita Saha</b>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Ankita Saha</h1>
+      <p class="role">Forensic science undergraduate and research enthusiast</p>
+      <p>I study forensic science at Lovely Professional University and I'm curious about how AI and machine learning can support investigation and evidence analysis.</p>
+      <div class="btns">
+        <a class="btn solid" href="#projects">See my projects</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div>
+      <svg class="print" id="print" viewBox="0 0 400 480" role="img" aria-label="Decorative fingerprint pattern"></svg>
+      <div class="scale" aria-hidden="true"><span>0</span><span>1 cm</span><span>2 cm</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="wrap">
+    <h2>About me</h2>
+    <div class="cols">
+      <div>
+        <p>I'm pursuing a B.Sc. in Forensic Science (Honours with Research) at Lovely Professional University, Punjab. My interests are forensic investigation, digital forensics and crime scene analysis.</p>
+        <p>I want to explore how Artificial Intelligence and Machine Learning can be used in investigative procedures and evidence analysis. I took part in a national-level competition associated with the National Forensic Sciences University (NFSU), Gandhinagar, and won First Prize in Press Day.</p>
+        <p>I'm looking for practical exposure through internships, workshops and collaborative research projects.</p>
+      </div>
+      <aside class="fact" aria-label="Quick facts">
+        <dl>
+          <dt>Studying</dt><dd>B.Sc. Forensic Science (Hons. with Research)</dd>
+          <dt>University</dt><dd>Lovely Professional University</dd>
+          <dt>From</dt><dd>Malkangiri, Odisha, India</dd>
+          <dt>Languages</dt><dd>English, Hindi, Bengali, Odia</dd>
+          <dt>Interests</dt><dd>Digital forensics, crime scene investigation, fingerprint analysis, AI in forensic science</dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <ol class="edu">
+      <li>
+        <h3>B.Sc. Forensic Science (Honours with Research)</h3>
+        <p class="where">Lovely Professional University, Punjab, India. Currently studying.</p>
+        <ul>
+          <li>Focus: forensic science and criminal investigation</li>
+          <li>Interests: digital forensics, crime scene investigation, fingerprint analysis, emerging forensic technologies</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Class XII, Senior Secondary</h3>
+        <p class="where">GRJSC, Malkangiri, Odisha. Score: 92%.</p>
+      </li>
+      <li>
+        <h3>Class X, Secondary</h3>
+        <p class="where">JPHS MV-7, Malkangiri, Odisha.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <div class="exhibits">
+      <article class="exhibit">
+        <div class="marker" aria-hidden="true">1</div>
+        <div>
+          <h3>AI and Machine Learning in Forensic Science</h3>
+          <p class="type">Academic project on emerging forensic technologies</p>
+          <p>An exploration of how AI and ML could advance forensic science and criminal investigation.</p>
+          <ul>
+            <li>Applications of AI and ML in modern forensic science</li>
+            <li>How technology may assist investigation and evidence-related processes</li>
+            <li>Automated systems and investigative efficiency</li>
+            <li>The growing link between computer science and forensics</li>
+          </ul>
+          <div class="chips"><span class="chip">Artificial Intelligence</span><span class="chip">Machine Learning</span><span class="chip">Forensic Science</span></div>
+        </div>
+      </article>
+      <article class="exhibit">
+        <div class="marker" aria-hidden="true">2</div>
+        <div>
+          <h3>Waste2Wow</h3>
+          <p class="type">Sustainable Development Goals (SDG) project</p>
+          <p>A sustainability project on waste management, resource use and environmental awareness.</p>
+          <ul>
+            <li>Innovative approaches to waste management</li>
+            <li>Recycling and responsible use of resources</li>
+            <li>Creative problem-solving for environmental sustainability</li>
+          </ul>
+          <div class="chips"><span class="chip">Sustainability</span><span class="chip">Waste Management</span><span class="chip">Innovation</span></div>
+        </div>
+      </article>
+      <article class="exhibit">
+        <div class="marker" aria-hidden="true">3</div>
+        <div>
+          <h3>Crime Thriller Short Film</h3>
+          <p class="type">Creative and academic media project</p>
+          <p>I took part in a crime thriller short film that combines storytelling with crime-related themes.</p>
+          <ul>
+            <li>Telling crime narratives through film</li>
+            <li>Investigative and psychological themes on screen</li>
+            <li>Working with a team on a creative production</li>
+          </ul>
+          <div class="chips"><span class="chip">Filmmaking</span><span class="chip">Storytelling</span><span class="chip">Collaboration</span></div>
+        </div>
+      </article>
+    </div>
+    <p class="note">More work will appear on my <a href="https://github.com/sahaankita7681-code">GitHub profile</a>.</p>
+  </div>
+</section>
+
+<section id="achievements" class="night">
+  <div class="wrap">
+    <h2>Achievements</h2>
+    <div class="glow">
+      <div class="win">
+        <h3>National-level competition</h3>
+        <p>Took part in a national-level competition associated with NFSU Gandhinagar, a setting focused on forensic science.</p>
+      </div>
+      <div class="win">
+        <h3>Press Day, First Prize</h3>
+        <p>Won First Prize in Press Day activities.</p>
+      </div>
+      <div class="win">
+        <h3>Certificates</h3>
+        <p>Earned additional certificates for taking part in academic and creative activities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div>
+        <h3>Computer applications</h3>
+        <ul>
+          <li>Microsoft Word</li>
+          <li>Microsoft PowerPoint</li>
+          <li>Digital documentation</li>
+          <li>Basic computer operations</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Forensic science basics</h3>
+        <ul>
+          <li>Introduction to digital forensics</li>
+          <li>Crime scene investigation fundamentals</li>
+          <li>Fingerprint analysis concepts</li>
+          <li>Evidence documentation</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Working style</h3>
+        <ul>
+          <li>Communication and teamwork</li>
+          <li>Critical thinking</li>
+          <li>Observation and attention to detail</li>
+          <li>Research and time management</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">The forensic skills above are academic, foundational knowledge, not professional examination experience.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <a class="big" href="mailto:sahaankita7681@gmail.com">sahaankita7681@gmail.com</a>
+    <ul>
+      <li><a href="tel:+918658356060">+91 8658356060</a></li>
+      <li><a href="https://www.linkedin.com/in/ankita-saha-444279430/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/sahaankita7681-code" target="_blank" rel="noopener">GitHub</a></li>
+      <li>Malkangiri, Odisha, India</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="yr">2026</span> Ankita Saha</div>
+</footer>
+
+<script>
+// Fingerprint: concentric, slightly warped ridges drawn once on load
+(function(){
+  var svg=document.getElementById('print'),NS='http://www.w3.org/2000/svg';
+  var cx=200,cy=250,out='';
+  for(var r=10;r<=190;r+=9){
+    var d='',steps=120;
+    for(var i=0;i<=steps;i++){
+      var a=i/steps*Math.PI*2;
+      var w=1+0.12*Math.sin(a*3+r*0.07)+0.05*Math.sin(a*5-r*0.11);
+      var rx=r*0.82*w, ry=r*1.12*w*(1+0.05*Math.cos(a*2));
+      var x=cx+rx*Math.cos(a), y=cy+ry*Math.sin(a)-(a>Math.PI?0:r*0.06);
+      d+=(i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1);
+    }
+    var p=document.createElementNS(NS,'path');
+    p.setAttribute('d',d+'Z');
+    // leave a gap in outer ridges so the print looks like a real, partial impression
+    if(r>150){p.setAttribute('stroke-dasharray','260 40');}
+    else{p.classList.add('draw');p.style.setProperty('--len',Math.round(r*7.2));}
+    svg.appendChild(p);
+  }
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
